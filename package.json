@@ -1,0 +1,13 @@
+{
+  "name": "okmarvin-starter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "okmarvin build"
+  },
+  "dependencies": {
+    "@okmarvin/january": "^1.12.0"
+  }
+}
