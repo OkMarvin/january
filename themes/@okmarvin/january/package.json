@@ -45,8 +45,5 @@
   "dependencies": {
     "prismjs": "^1.15.0",
     "sanitize.css": "^8.0.0"
-  },
-  "installConfig": {
-    "pnp": true
   }
 }
