@@ -8,7 +8,7 @@ const history = require('connect-history-api-fallback')
 const getPort = require('get-port')
 const root = path.join(__dirname, '..', '..', '..')
 
-const bundler = new Bundler(path.join(__dirname, 'index.html'))
+const bundler = new Bundler(path.join(__dirname, 'index.html'), { autoinstall: false })
 let server
 const app = express()
 const historyOptions = {
