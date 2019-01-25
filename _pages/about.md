@@ -1,6 +1,6 @@
 ---
 title: About okmarvin
-date: 2018-6-15
+date: 2019-1-25
 ---
 
-okmarvin is an opinionated static site generator with Component built in React as template.
+okmarvin is an opinionated static site generator with Component as template.
