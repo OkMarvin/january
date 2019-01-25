@@ -7,7 +7,7 @@ import Pagination from '../components/Pagination'
 import PageContentHeader from '../components/PageContentHeader'
 import i18n from '../i18n'
 class Tag extends React.Component {
-  render () {
+  render() {
     const { title, data, siteConfig } = this.props
     const { paginate, lang } = siteConfig
     return (

@@ -9,7 +9,7 @@ import { bps, lineHeight, mobileScale, scale } from '../constants'
 import ArchiveItem from '../components/ArchiveItem'
 import Pagination from '../components/Pagination'
 class Index extends React.Component {
-  render () {
+  render() {
     const { data, siteConfig } = this.props
     const { paginate } = siteConfig
     const archives = groupBy(data, file =>
@@ -29,12 +29,12 @@ class Index extends React.Component {
               return (
                 <React.Fragment key={year}>
                   <Block
-                    component='h2'
-                    fontFamily='Courier, monospace'
+                    component="h2"
+                    fontFamily="Courier, monospace"
                     fontSize={`${Math.pow(mobileScale, 3)}rem`}
                     marginTop={`${lineHeight * 2}rem`}
                     marginBottom={`${lineHeight / 2}rem`}
-                    fontWeight='bold'
+                    fontWeight="bold"
                     lineHeight={lineHeight - 0.3}
                     mediaQueries={bps}
                     lgFontSize={`${Math.pow(scale, 4)}rem`}
@@ -49,7 +49,9 @@ class Index extends React.Component {
                 </React.Fragment>
               )
             })}
-          {paginate && this.props.paginator && <Pagination {...this.props.paginator} paginate={paginate} />}
+          {paginate && this.props.paginator && (
+            <Pagination {...this.props.paginator} paginate={paginate} />
+          )}
         </Main>
       </>
     )

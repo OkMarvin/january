@@ -4,17 +4,17 @@ import PageContentHeader from '../components/PageContentHeader'
 import Html from '../components/Html'
 import Main from '../styled/Main'
 class Page extends React.Component {
-  render () {
+  render() {
     return (
       <>
         <Main>
-          <Block component='article'>
+          <Block component="article">
             <PageContentHeader {...this.props} />
             <section
               dangerouslySetInnerHTML={{
                 __html: this.props.content
               }}
-              className='okmarvin-content'
+              className="okmarvin-content"
             />
           </Block>
         </Main>

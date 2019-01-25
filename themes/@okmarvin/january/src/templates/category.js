@@ -7,14 +7,18 @@ import Pagination from '../components/Pagination'
 import PageContentHeader from '../components/PageContentHeader'
 import i18n from '../i18n'
 class Category extends React.Component {
-  render () {
+  render() {
     const { title, data, siteConfig } = this.props
     const { paginate, lang } = siteConfig
     return (
       <Main>
         {
           <>
-            {<PageContentHeader title={`${i18n('Category: ', lang)}${title}`} />}
+            {
+              <PageContentHeader
+                title={`${i18n('Category: ', lang)}${title}`}
+              />
+            }
             {data.map(d => (
               <ArchiveItem key={d.permalink} {...d} />
             ))}
