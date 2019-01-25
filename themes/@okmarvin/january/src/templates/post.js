@@ -6,20 +6,23 @@ import PostSiblings from '../components/PostSiblings'
 import RelatedPost from '../components/RelatedPost'
 import Html from '../components/Html'
 class Post extends React.Component {
-  render () {
+  render() {
     return (
       <Main>
-        <Block component='article'>
+        <Block component="article">
           <PostContentHeader {...this.props} />
           <section
             dangerouslySetInnerHTML={{
               __html: this.props.content
             }}
-            className='okmarvin-content'
+            className="okmarvin-content"
           />
         </Block>
         {this.props.related && (
-          <RelatedPost data={this.props.related.slice(0, 5)} siteConfig={this.props.siteConfig} />
+          <RelatedPost
+            data={this.props.related.slice(0, 5)}
+            siteConfig={this.props.siteConfig}
+          />
         )}
         <PostSiblings {...this.props} />
       </Main>
