@@ -16,13 +16,13 @@ const historyOptions = {
   rewrites: [
     {
       from: /\/static/i,
-      to: function (context) {
+      to: function(context) {
         return '/public' + context.parsedUrl.pathname
       }
     },
     {
       from: /\.(jpg|jpeg|png|gif|webp|html)$/i,
-      to: function (context) {
+      to: function(context) {
         const pathname = context.parsedUrl.pathname
         const { files } = app.locals.conn
         const findParent = files.find(
@@ -61,7 +61,7 @@ bundler.on('buildEnd', () => {
   }
 })
 let watcher
-const devHook = function (conn, callback) {
+const devHook = function(conn, callback) {
   fs.writeFile(
     path.join(__dirname, '_data.js'),
     'export default' + JSON.stringify(conn),

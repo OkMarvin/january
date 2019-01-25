@@ -3,5 +3,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error'
   },
-  extends: ['prettier/react', 'prettier/standard']
+  extends: ['prettier/react', 'prettier/standard'],
+  parserOptions: {
+    ecmaVersion: 6
+  }
 }
