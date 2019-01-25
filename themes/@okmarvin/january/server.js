@@ -6,7 +6,7 @@ const path = require('path')
 const Bundler = require('parcel-bundler')
 const history = require('connect-history-api-fallback')
 const getPort = require('get-port')
-const root = '../../..'
+const root = path.join(__dirname, '..', '..', '..')
 
 const bundler = new Bundler(path.join(__dirname, 'index.html'))
 let server
