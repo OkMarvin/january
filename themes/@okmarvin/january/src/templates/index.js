@@ -10,9 +10,9 @@ import ArchiveItem from '../components/ArchiveItem'
 import Pagination from '../components/Pagination'
 class Index extends React.Component {
   render() {
-    const { data, siteConfig } = this.props
+    const { posts, siteConfig } = this.props
     const { paginate } = siteConfig
-    const archives = groupBy(data, file =>
+    const archives = groupBy(posts, file =>
       getYear(new Date(file.datePublished))
     )
     Object.keys(archives).map(year => {

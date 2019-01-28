@@ -8,14 +8,14 @@ import PageContentHeader from '../components/PageContentHeader'
 import i18n from '../i18n'
 class Tag extends React.Component {
   render() {
-    const { title, data, siteConfig } = this.props
+    const { title, posts, siteConfig } = this.props
     const { paginate, lang } = siteConfig
     return (
       <Main>
         {
           <>
             {<PageContentHeader title={`${i18n('Topic: ', lang)}${title}`} />}
-            {data.map(d => (
+            {posts.map(d => (
               <ArchiveItem key={d.permalink} {...d} />
             ))}
           </>
