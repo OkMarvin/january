@@ -1,5 +1,5 @@
 /**
- * for React.js
+ * for React.js + jsxstyle
  * you can customize it as you need
  */
 const path = require('path')
@@ -10,14 +10,19 @@ const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CssoWebpackPlugin = require('csso-webpack-plugin').default
 const ManifestPlugin = require('webpack-manifest-plugin')
+const JsxstylePlugin = require('jsxstyle-webpack-plugin')
+const { readdirSync, existsSync } = require('fs')
 
-const fs = require('fs')
-const { readdirSync } = fs
-const templates = path.resolve(__dirname, 'src', 'templates')
-let entries = {}
+// for templates
+const entries = {}
+
 // for manifest
-let seed = {}
+const seed = {}
+
+// load all templates from src/templates directory
+// make sure .test.js files are excluded
 try {
+  const templates = path.resolve(__dirname, 'src', 'templates')
   readdirSync(templates).forEach(template => {
     const basename = path.basename(template, path.extname(template))
     if (!basename.endsWith('.test')) {
@@ -25,8 +30,10 @@ try {
     }
   })
 } catch (e) {
-  // folder not exist
+  // src/templates directory does not exist
 }
+
+const outputPath = path.resolve(__dirname, 'build')
 
 const jsRule = {
   test: /\.js$/,
@@ -41,6 +48,13 @@ const jsRule = {
           '@babel/plugin-proposal-class-properties'
         ]
       }
+    },
+    {
+      loader: JsxstylePlugin.loader,
+      options: {
+        whitelistedModules: [require.resolve('./src/constants')],
+        cacheFile: path.resolve(__dirname, 'jsxstyle-cache.txt')
+      }
     }
   ]
 }
@@ -48,7 +62,7 @@ let config = {
   entry: entries,
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: outputPath,
     filename: '[name].[contenthash].js',
     libraryTarget: 'commonjs'
   },
@@ -77,7 +91,7 @@ let config = {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: () => [require('autoprefixer')(), require('cssnano')()]
+              plugins: () => [require('autoprefixer')(), require('cssnano')()] // we need autoprefixer here since jsxstyle doesn't do it for us
             }
           }
         ]
@@ -88,11 +102,11 @@ let config = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: '/static/img/'
+              outputPath: '/static/img/' // output to `/static/img`
             }
           },
           {
-            loader: 'image-webpack-loader',
+            loader: 'image-webpack-loader', // optimize images
             options: {
               disable: true
             }
@@ -102,32 +116,33 @@ let config = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin(['build']), // remove build first
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new ManifestPlugin({ seed }),
-    new CssoWebpackPlugin()
+    new CssoWebpackPlugin(),
+    new JsxstylePlugin()
   ],
-  externals: [nodeExternals()],
+  externals: [nodeExternals()], // do not include node modules
   target: 'node'
 }
 // bundle client/index.js too when it exists
-// it should target web
-if (fs.existsSync(path.resolve(__dirname, 'src/client/index.js'))) {
+// target defaults to `web`
+if (existsSync(path.resolve(__dirname, 'src/client/index.js'))) {
   config = [
     config,
     {
       mode: 'production',
       entry: {
-        client: './src/client'
+        client: './src/client' // make sure entry name is set to `client`
       },
       output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: '[name].[contenthash].js' // do not remove contenthash here!! Or cache will be broken.
+        path: outputPath,
+        filename: '[name].[contenthash].js'
       },
       module: {
         rules: [jsRule]
       },
-      plugins: [new ManifestPlugin({ seed })]
+      plugins: [new ManifestPlugin({ seed }), new JsxstylePlugin()]
     }
   ]
 }

@@ -757,10 +757,10 @@
     markdown-it-linkify-images "^1.1.0"
     prismjs "^1.15.0"
 
-"@okmarvin/okmarvin@latest":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@okmarvin/okmarvin/-/okmarvin-0.0.20.tgz#91a19f418bd783f9969b0e4a1eb3de4357156a12"
-  integrity sha512-SDSgZ633rATvG53QsKFuUtXFHaZsqwfOCbakpGyseCfG7XfsxTHBdEVzTFa6lPIGfDdnm2ct7q0slOlIAJ5Rkw==
+"@okmarvin/okmarvin@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@okmarvin/okmarvin/-/okmarvin-0.0.21.tgz#25792aa4409248822c2b964097917b7e666f7f44"
+  integrity sha512-0f5dWn4FO91VvjcHxmHrLpDBeLXLFTMkEQkx6Vid2+6UyeHS7JTjFzeKVdpkldUjjnDXR1eO6f4hRD6v5qpM7w==
   dependencies:
     "@iarna/toml" "^2.1.1"
     "@okmarvin/generate-feed" "^0.1.11"
@@ -1051,7 +1051,7 @@ ajv-keywords@^3.1.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
   integrity sha1-6GuBnGAs+IIa1jdBNpjx3sAhhHo=
 
-ajv@^6.1.0, ajv@^6.7.0:
+ajv@^6.1.0, ajv@^6.5.3, ajv@^6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.7.0.tgz#e3ce7bb372d6577bb1839f1dfdfcbf5ad2948d96"
   integrity sha512-RZXPviBTtfmtka9n9sy1N5M5b82CbxWIR6HIis4s3WQTXDJamc/0gpCWNGz6EWdWp4DOfjzJfhz/AS9zVPjjWg==
@@ -3448,7 +3448,7 @@ interpret@^1.1.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
 
-invariant@^2.2.2, invariant@^2.2.3:
+invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -3814,6 +3814,22 @@ jsxstyle-utils@^2.1.4:
   integrity sha512-hlSmPX8tIHTCqfQ++X67adSbD5a1EB/pmhgtHkjLZniE8/x0Aj5R4T+VAlBMJ3ij/p7jDEDKK2Zz7XmvSVkuxQ==
   dependencies:
     csstype "^2.5.7"
+
+jsxstyle-webpack-plugin@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/jsxstyle-webpack-plugin/-/jsxstyle-webpack-plugin-1.1.4.tgz#b5df34eecca3f9138d241d2b4a81e7b6ed104901"
+  integrity sha512-rNPG2eDW1jt9e7279rVdLBoVvA6HERFwfBiflFZc+ABup8QdYTzm5jasroKoXJZIYcCwZMvqhQ9mJh2iWsCB2Q==
+  dependencies:
+    "@babel/core" "^7.0.0"
+    "@babel/generator" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    "@babel/types" "^7.0.0"
+    ajv "^6.5.3"
+    invariant "^2.2.1"
+    jsxstyle "^2.1.4"
+    jsxstyle-utils "^2.1.4"
+    loader-utils "^1.1.0"
 
 jsxstyle@^2.1.4:
   version "2.1.4"
