@@ -35,11 +35,18 @@
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0",
     "webpack-manifest-plugin": "^2.0.4",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "babel-jest": "^24.0.0",
+    "eslint": "^5.12.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.0.0",
+    "prettier": "^1.16.1",
+    "react-test-renderer": "^16.7.0"
   },
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --config webpack.prod.config.js"
+    "build": "webpack --config webpack.prod.config.js",
+    "test": "jest"
   },
   "browserslist": [
     "last 2 versions"
@@ -50,5 +57,11 @@
   "dependencies": {
     "prismjs": "^1.15.0",
     "sanitize.css": "^8.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
