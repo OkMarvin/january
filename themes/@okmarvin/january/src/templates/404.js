@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 import Main from '../styled/Main'
 import { Block, Inline, InlineBlock, Row } from 'jsxstyle'
-export default ({ siteConfig, title }) => (
+export default ({ site, title }) => (
   <Main>
     <Block component="h1" borderBottom="1px solid #ddd">
       Page Not Found
@@ -18,7 +18,7 @@ export default ({ siteConfig, title }) => (
       </Inline>
       .
     </p>
-    {siteConfig.logo && (
+    {site.logo && (
       <Row
         alignItems="center"
         justifyContent="center"
@@ -34,9 +34,9 @@ export default ({ siteConfig, title }) => (
           borderRadius={3}
           border="none"
           marginRight={5}
-          props={{ src: siteConfig.logo }}
+          props={{ src: site.logo }}
         />
-        {siteConfig.title}
+        {site.title}
       </Row>
     )}
   </Main>

@@ -11,7 +11,7 @@ export default class Html extends React.Component {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     permalink: PropTypes.string,
-    siteConfig: PropTypes.shape({
+    site: PropTypes.shape({
       lang: PropTypes.string.isRequired,
       url: PropTypes.string,
       title: PropTypes.string.isRequired
@@ -21,17 +21,17 @@ export default class Html extends React.Component {
     description: ''
   }
   render () {
-    const { siteConfig, permalink } = this.props
+    const { site, permalink } = this.props
     const {
       title: siteTitle,
       logo,
       menu
-    } = siteConfig
+    } = site
     return (
       <>
         <Header siteTitle={siteTitle} menu={menu} currentUrl={permalink} logo={logo} />
         {this.props.children}
-        <Footer {...siteConfig} />
+        <Footer {...site} />
       </>
     )
   }

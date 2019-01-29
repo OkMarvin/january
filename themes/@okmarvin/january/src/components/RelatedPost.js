@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 import { Block, InlineBlock } from 'jsxstyle'
 import i18n from '../i18n'
-const Related = ({ data, siteConfig: { lang } }) => (
+const Related = ({ data, site: { lang } }) => (
   <>
     {data.length ? (
       <aside>

@@ -12,7 +12,7 @@ const PostContentHeader = ({
   author,
   datePublished,
   tags,
-  siteConfig: { lang }
+  site: { lang }
 }) => (
   <ArticleHeader>
     <ArticleHeading>{title}</ArticleHeading>

@@ -8,8 +8,8 @@ import PageContentHeader from '../components/PageContentHeader'
 import i18n from '../i18n'
 class Category extends React.Component {
   render() {
-    const { title, posts, siteConfig } = this.props
-    const { paginate, lang } = siteConfig
+    const { title, posts, site } = this.props
+    const { paginate, lang } = site
     return (
       <Main>
         {
@@ -34,7 +34,7 @@ class Category extends React.Component {
 Category.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  siteConfig: PropTypes.shape({
+  site: PropTypes.shape({
     paginate: PropTypes.number
   }),
   data: PropTypes.array,

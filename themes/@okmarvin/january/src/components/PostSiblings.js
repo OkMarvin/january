@@ -19,7 +19,7 @@ const NextLink = ({ children }) => (
 )
 export default class PostSiblings extends React.Component {
   render () {
-    const { newerSibling, olderSibling, siteConfig: { lang } } = this.props
+    const { newerSibling, olderSibling, site: { lang } } = this.props
     return (
       <Col
         alignItems='flex-start'

@@ -10,8 +10,8 @@ import ArchiveItem from '../components/ArchiveItem'
 import Pagination from '../components/Pagination'
 class Index extends React.Component {
   render() {
-    const { posts, siteConfig } = this.props
-    const { paginate } = siteConfig
+    const { posts, site } = this.props
+    const { paginate } = site
     const archives = groupBy(posts, file =>
       getYear(new Date(file.datePublished))
     )
@@ -60,7 +60,7 @@ class Index extends React.Component {
 Index.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  siteConfig: PropTypes.shape({
+  site: PropTypes.shape({
     menu: PropTypes.array
   }),
   data: PropTypes.array,

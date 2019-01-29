@@ -4,7 +4,7 @@ import Html from './Html'
 it('renders without crashing', () => {
   const div = document.createElement('div')
   const props = {
-    siteConfig: {
+    site: {
       lang: 'zh',
       title: 'okmarvin',
       theme: '@okmarvin/january'

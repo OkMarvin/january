@@ -21,7 +21,7 @@ class Post extends React.Component {
         {this.props.related && (
           <RelatedPost
             data={this.props.related.slice(0, 5)}
-            siteConfig={this.props.siteConfig}
+            site={this.props.site}
           />
         )}
         <PostSiblings {...this.props} />
