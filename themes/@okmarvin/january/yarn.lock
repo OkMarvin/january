@@ -709,17 +709,17 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@okmarvin/generate-feed@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@okmarvin/generate-feed/-/generate-feed-0.1.11.tgz#8f133c952af839a086c48c8e0e4fc3b069dc0e39"
-  integrity sha512-8VcBzQMd//F75bxIHhPhL8Pn/w+qyFfv5TgSaf59zA5SUYC/aqI07dDUvIivv8nKbbf5mDdADexwnb13VCrBEg==
+"@okmarvin/generate-feed@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@okmarvin/generate-feed/-/generate-feed-0.1.12.tgz#6ea2289cc72430814d3425ab7822ab7eecb28f7d"
+  integrity sha512-c92V9cLK51/6TCRx7Hea51x6CYM+YbppX2QtUC3LVp62dsTQ8f6+jnyoz5iU33GbbV1ej+FLBzz41Eo0d1mQtw==
   dependencies:
     "@okmarvin/generate-xml" "^0.0.4"
 
-"@okmarvin/generate-sitemap@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@okmarvin/generate-sitemap/-/generate-sitemap-0.1.6.tgz#864484d97625a646869b6b6a209e05fcadc384e0"
-  integrity sha512-rgmMi+pVAb4wSo9m+RZsPR+3SEcsJOOp1IjrpK7BP1Yxh5JyiPJxtYy6nnlt9zA4eOMTWL4frO6doeXnzZFqFg==
+"@okmarvin/generate-sitemap@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@okmarvin/generate-sitemap/-/generate-sitemap-0.1.7.tgz#4a4e2e23b199488c7407728dc8f783ef917a6706"
+  integrity sha512-4G7dFy0K+5RzQTQFY3xvrJdq3aMi+TTxrInSnyGiKbhbG3WNEXNJDibeQ1BFrZL8P5GWbyuCOgn4qi25dxrdrw==
   dependencies:
     "@okmarvin/generate-xml" "^0.0.4"
 
@@ -747,7 +747,26 @@
     github-slugger "^1.2.0"
     innertext "^1.0.3"
 
-"@okmarvin/markdown@^0.0.3", "@okmarvin/markdown@latest":
+"@okmarvin/markdown-it-toc@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@okmarvin/markdown-it-toc/-/markdown-it-toc-0.0.20.tgz#ac49c1e13b7b6ad1822699d18bae213153a323eb"
+  integrity sha512-GGC1Hf+Ka16KeElsaeMPFy+rm2OMLrmX7SzBckRK2E2sKt8RQ4wQHYDIFq6R8teJfN/pj1+xQcPHYDdc9iqi1g==
+  dependencies:
+    clone "^2.1.1"
+    github-slugger "^1.2.0"
+    innertext "^1.0.3"
+
+"@okmarvin/markdown@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@okmarvin/markdown/-/markdown-0.0.4.tgz#200d1b3ad1819e3a54f1f4fc55ffca9a70471e29"
+  integrity sha512-s1Qp4wICLYdonV4eyEBsjAr5Ultbrbru9ZYb3G5wJQEQBS2fDRSATNlhf1i/vFsJkS8I0dDp4phbn6exRDOwZw==
+  dependencies:
+    "@okmarvin/markdown-it-toc" "^0.0.20"
+    markdown-it "^8.4.2"
+    markdown-it-linkify-images "^1.1.0"
+    prismjs "^1.15.0"
+
+"@okmarvin/markdown@latest":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@okmarvin/markdown/-/markdown-0.0.3.tgz#585f17d273eaf2f9ac677da3bd7bbcea6efc993f"
   integrity sha512-PwxhpgaR8lkib/+Yqfvaq8z8LfOPprq/y22gG2CZpbNCvy9gFimyHWGc8OiIcu1LUiPskjAlksGM47FY9r7faw==
@@ -757,16 +776,16 @@
     markdown-it-linkify-images "^1.1.0"
     prismjs "^1.15.0"
 
-"@okmarvin/okmarvin@^0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@okmarvin/okmarvin/-/okmarvin-0.0.21.tgz#25792aa4409248822c2b964097917b7e666f7f44"
-  integrity sha512-0f5dWn4FO91VvjcHxmHrLpDBeLXLFTMkEQkx6Vid2+6UyeHS7JTjFzeKVdpkldUjjnDXR1eO6f4hRD6v5qpM7w==
+"@okmarvin/okmarvin@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@okmarvin/okmarvin/-/okmarvin-0.0.22.tgz#f69e31fa10aeabb7166fb01d44e25edc17e3fafd"
+  integrity sha512-6y9nydEexk9djbyTjNZxAuVs9dECdRTndIjowoNlsB8WBrq4x3V3HA4ingVpObZUIWgxaIIXCoaqouFqpYOgLw==
   dependencies:
     "@iarna/toml" "^2.1.1"
-    "@okmarvin/generate-feed" "^0.1.11"
-    "@okmarvin/generate-sitemap" "^0.1.6"
+    "@okmarvin/generate-feed" "^0.1.12"
+    "@okmarvin/generate-sitemap" "^0.1.7"
     "@okmarvin/helpers" "^0.0.2"
-    "@okmarvin/markdown" "^0.0.3"
+    "@okmarvin/markdown" "^0.0.4"
     "@okmarvin/promise-catcher" "^1.0.3"
     "@okmarvin/slug" "^0.0.8"
     "@parcel/logger" "^1.11.0"

@@ -10,7 +10,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "@okmarvin/markdown": "latest",
-    "@okmarvin/okmarvin": "^0.0.21",
+    "@okmarvin/okmarvin": "^0.0.22",
     "@reach/router": "^1.2.1",
     "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.2",
