@@ -738,15 +738,6 @@
   dependencies:
     ajv "^6.7.0"
 
-"@okmarvin/markdown-it-toc@^0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@okmarvin/markdown-it-toc/-/markdown-it-toc-0.0.19.tgz#8df62caf15f468485ad127d827e075b0d8f7eebf"
-  integrity sha512-CNlDMVgdEv8WkFXPVgUd8kTZAMtf2m76263GTMPbnHpfBkxkpHjeMDjd714g3Pwym3kL+jlYpAHe14yluiz4NQ==
-  dependencies:
-    clone "^2.1.1"
-    github-slugger "^1.2.0"
-    innertext "^1.0.3"
-
 "@okmarvin/markdown-it-toc@^0.0.20":
   version "0.0.20"
   resolved "https://registry.yarnpkg.com/@okmarvin/markdown-it-toc/-/markdown-it-toc-0.0.20.tgz#ac49c1e13b7b6ad1822699d18bae213153a323eb"
@@ -756,22 +747,12 @@
     github-slugger "^1.2.0"
     innertext "^1.0.3"
 
-"@okmarvin/markdown@^0.0.4":
+"@okmarvin/markdown@0.0.4", "@okmarvin/markdown@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@okmarvin/markdown/-/markdown-0.0.4.tgz#200d1b3ad1819e3a54f1f4fc55ffca9a70471e29"
   integrity sha512-s1Qp4wICLYdonV4eyEBsjAr5Ultbrbru9ZYb3G5wJQEQBS2fDRSATNlhf1i/vFsJkS8I0dDp4phbn6exRDOwZw==
   dependencies:
     "@okmarvin/markdown-it-toc" "^0.0.20"
-    markdown-it "^8.4.2"
-    markdown-it-linkify-images "^1.1.0"
-    prismjs "^1.15.0"
-
-"@okmarvin/markdown@latest":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@okmarvin/markdown/-/markdown-0.0.3.tgz#585f17d273eaf2f9ac677da3bd7bbcea6efc993f"
-  integrity sha512-PwxhpgaR8lkib/+Yqfvaq8z8LfOPprq/y22gG2CZpbNCvy9gFimyHWGc8OiIcu1LUiPskjAlksGM47FY9r7faw==
-  dependencies:
-    "@okmarvin/markdown-it-toc" "^0.0.19"
     markdown-it "^8.4.2"
     markdown-it-linkify-images "^1.1.0"
     prismjs "^1.15.0"
@@ -4890,17 +4871,17 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsxstyle-utils@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jsxstyle-utils/-/jsxstyle-utils-2.1.4.tgz#e9f4ef3374f5e45ef5362e8f09f6c4fdcc57a96a"
-  integrity sha512-hlSmPX8tIHTCqfQ++X67adSbD5a1EB/pmhgtHkjLZniE8/x0Aj5R4T+VAlBMJ3ij/p7jDEDKK2Zz7XmvSVkuxQ==
+jsxstyle-utils@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/jsxstyle-utils/-/jsxstyle-utils-2.1.5.tgz#c49990af96ad70e6940e611e64101219051319ef"
+  integrity sha512-a6Is5V/GXTwjns2T8+ZByk0LF4FR3SDOicKPpXXK3d36ivs/Y4hPnDJTnVpoIOm3ZWJnasCTpTeq9BlpfmAGig==
   dependencies:
     csstype "^2.5.7"
 
-jsxstyle-webpack-plugin@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/jsxstyle-webpack-plugin/-/jsxstyle-webpack-plugin-1.1.4.tgz#b5df34eecca3f9138d241d2b4a81e7b6ed104901"
-  integrity sha512-rNPG2eDW1jt9e7279rVdLBoVvA6HERFwfBiflFZc+ABup8QdYTzm5jasroKoXJZIYcCwZMvqhQ9mJh2iWsCB2Q==
+jsxstyle-webpack-plugin@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/jsxstyle-webpack-plugin/-/jsxstyle-webpack-plugin-1.1.5.tgz#d0fb99053e2343239328b47f08c6f9a955791adb"
+  integrity sha512-tdgdfxdE6k5lVIYhCMDjypSFwk6REa0ED8oEo7shEcqgLYT/wyHJkTSOMuXo50wBzIMDuNSgxC6fcd/z54xctA==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/generator" "^7.0.0"
@@ -4909,16 +4890,16 @@ jsxstyle-webpack-plugin@^1.1.4:
     "@babel/types" "^7.0.0"
     ajv "^6.5.3"
     invariant "^2.2.1"
-    jsxstyle "^2.1.4"
-    jsxstyle-utils "^2.1.4"
+    jsxstyle "^2.1.5"
+    jsxstyle-utils "^2.1.5"
     loader-utils "^1.1.0"
 
-jsxstyle@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jsxstyle/-/jsxstyle-2.1.4.tgz#45fc1bfe42b9235cc959193a2d157bb21935e5d8"
-  integrity sha512-Yzw+PxrEvuRj58jM+GMSMzfPg2HLaD2bFOtVpEk4zQ4zmiUm7BnlsrFqWxxpPgHzh+dNKHEooc9mf8MN3yY/6g==
+jsxstyle@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/jsxstyle/-/jsxstyle-2.1.5.tgz#539f727f3f6240fc2472bffe12a8cc1a05085700"
+  integrity sha512-OPGUV54ErFckMXXRyMPm95o+ZBZhYzuyV9N4k9bjbYAu1oVWYQ6FQ5Z6C7VZA9z49XvmdqtSpT3KT+zm/rs9RA==
   dependencies:
-    jsxstyle-utils "^2.1.4"
+    jsxstyle-utils "^2.1.5"
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"

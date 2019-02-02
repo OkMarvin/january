@@ -8,6 +8,6 @@
     "build": "okmarvin build"
   },
   "dependencies": {
-    "@okmarvin/january": "^1.14.0"
+    "@okmarvin/january": "^1.15.6"
   }
 }
