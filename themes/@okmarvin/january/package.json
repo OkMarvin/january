@@ -1,6 +1,6 @@
 {
   "name": "@okmarvin/january",
-  "version": "1.15.6",
+  "version": "1.15.7",
   "main": "build/manifest.json",
   "license": "MIT",
   "devDependencies": {
