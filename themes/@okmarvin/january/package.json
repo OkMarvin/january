@@ -68,5 +68,9 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "homepage": "https://github.com/OkMarvin/january"
+  "homepage": "https://github.com/OkMarvin/january",
+  "author": {
+    "name": "Sam Chen",
+    "url": "https://blog.zfanw.com"
+  }
 }
