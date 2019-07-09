@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from '@reach/router'
 import Main from '../styled/Main'
 import { Block, Inline, InlineBlock, Row } from 'jsxstyle'
-export default ({ site, title }) => (
+import PropTypes from 'prop-types'
+const NotFound = ({ site, title }) => (
   <Main>
     <Block component="h1" borderBottom="1px solid #ddd">
       Page Not Found
@@ -10,7 +11,7 @@ export default ({ site, title }) => (
     <p>
       Go{' '}
       <Inline
-        textDecoration="underline !important"
+        textDecoration="none !important"
         component={Link}
         props={{ to: '/' }}
       >
@@ -27,6 +28,7 @@ export default ({ site, title }) => (
         textAlign="center"
         marginTop={200}
         textDecoration="none"
+        hoverTextDecoration="none"
       >
         <InlineBlock
           component="img"
@@ -41,3 +43,11 @@ export default ({ site, title }) => (
     )}
   </Main>
 )
+NotFound.propTypes = {
+  site: PropTypes.shape({
+    logo: PropTypes.string,
+    title: PropTypes.string
+  }),
+  title: PropTypes.string
+}
+export default NotFound
