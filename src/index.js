@@ -5,33 +5,30 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router } from '@reach/router'
-import conn from '../_data'
-import md from '@okmarvin/markdown'
+import conn from '../data.json'
 import Components from './templates/*.js'
-const dispose = require('@okmarvin/okmarvin/lib/dispose')
 const root = document.getElementById('app')
 class ErrorBoundary extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { hasError: false }
   }
-  componentDidCatch (error, info) {
+  componentDidCatch(error, info) {
     if (error) console.error(error)
     this.setState({ hasError: true })
   }
 
-  render () {
+  render() {
     if (this.state.hasError) {
       return <h1>Something went wrong. Please refresh the page.</h1>
     }
     return this.props.children
   }
 }
-const { files, site, okmarvinConfig } = dispose(conn)
-const Md = md(okmarvinConfig)
+const { files, site } = conn
 render(
   <ErrorBoundary>
-    <Router id='___OkMarvin___'>
+    <Router id="___OkMarvin___">
       {files
         .filter(file => file.template) // exclude xml files
         .map(file => {
@@ -43,7 +40,6 @@ render(
                 key={file.permalink}
                 path={file.permalink}
                 {...file}
-                content={file.content ? Md.render(file.content) : ''}
                 site={site}
                 default={file.template === '404.js'}
               />
