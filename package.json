@@ -58,8 +58,8 @@
     "jsxstyle": "^2.1.5",
     "lodash": "^4.17.11",
     "prismjs": "^1.15.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sanitize.css": "^10.0.0"
   },
   "jest": {
