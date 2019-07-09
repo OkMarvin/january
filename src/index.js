@@ -5,6 +5,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router } from '@reach/router'
+import PropTypes from 'prop-types'
 import conn from '../data.json'
 import Components from './templates/*.js'
 const root = document.getElementById('app')
@@ -24,6 +25,9 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children
   }
+}
+ErrorBoundary.propTypes = {
+  children: PropTypes.any
 }
 const { files, site } = conn
 render(
