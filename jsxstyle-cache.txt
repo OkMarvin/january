@@ -46,3 +46,5 @@ fontWeight:bold;
 fontWeight:normal;
 color:#000;cursor:text;display:inline-block;fontWeight:bold;paddingBottom:1em;paddingTop:1em;@screen and (min-width: 45em)~color:#000;fontSize:1.125em;fontWeight:bold;
 color:#000;display:inline-block;hoverColor:#000;hoverTextDecoration:underline;linkColor:#000;paddingBottom:1em;paddingTop:1em;textDecoration:none;transition:color 0.1s;@screen and (min-width: 45em)~color:#333;fontSize:1.125em;hoverColor:#000;linkColor:#03c;
+display:inline;textDecoration:none !important;
+alignItems:center;display:flex;flexDirection:row;hoverTextDecoration:none;justifyContent:center;marginTop:200px;textAlign:center;textDecoration:none;
