@@ -3,26 +3,28 @@ import PropTypes from 'prop-types'
 import { Link } from '@reach/router'
 import { bps } from '../constants'
 import { Col, Inline } from 'jsxstyle'
+import { format } from 'date-fns'
 const ArchiveItem = ({ title, datePublished, permalink }) => (
   <Col
-    marginBottom='0.5rem'
+    marginBottom="0.5rem"
     mediaQueries={bps}
-    smFlexDirection='row'
-    smAlignItems='flex-end'
+    smFlexDirection="row"
+    smAlignItems="flex-end"
   >
     <Inline
       props={{
         to: permalink
       }}
       component={Link}
-      textDecoration='none'
-      fontSize='1rem'
-      color='#333'
-      linkColor='#333'
-      borderBottom='1px solid #ddd'
-      hoverTextDecoration='none'
-      hoverColor='#af0000'
+      textDecoration="none"
+      fontSize="1rem"
+      color="#333"
+      linkColor="#333"
+      borderBottom="1px solid #ddd"
+      hoverTextDecoration="none"
+      hoverColor="#af0000"
     >
+      <Inline fontStyle="italic" color='#999'>{format(datePublished, 'MM/DD')}</Inline>{' '}
       {title}
     </Inline>
   </Col>
