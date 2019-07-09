@@ -1,8 +1,10 @@
-_data.js
 # parcel out dir
 dist
+
 # theme build directory
 build
+
 # parcel cache
 .cache
+
 node_modules
