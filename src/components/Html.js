@@ -14,22 +14,25 @@ export default class Html extends React.Component {
     site: PropTypes.shape({
       lang: PropTypes.string.isRequired,
       url: PropTypes.string,
-      title: PropTypes.string.isRequired
+      title: PropTypes.string.isRequired,
+      logo: PropTypes.string,
+      menu: PropTypes.array
     })
   }
   static defaultProps = {
     description: ''
   }
-  render () {
+  render() {
     const { site, permalink } = this.props
-    const {
-      title: siteTitle,
-      logo,
-      menu
-    } = site
+    const { title: siteTitle, logo, menu } = site
     return (
       <>
-        <Header siteTitle={siteTitle} menu={menu} currentUrl={permalink} logo={logo} />
+        <Header
+          siteTitle={siteTitle}
+          menu={menu}
+          currentUrl={permalink}
+          logo={logo}
+        />
         {this.props.children}
         <Footer {...site} />
       </>
