@@ -1,3 +1,13 @@
+## Usage
+
+Adds this package to your okmarvin project and configures `_config.toml` to use it:
+
+```toml
+theme = "@okmarvin/january"
+```
+
+Make sure to put logo image into `okmarvin project/public/static/img` folder.
+
 ## Develop
 
 Clone this repo and install dependencies:
