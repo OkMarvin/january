@@ -1,9 +1,8 @@
 ## Development
 
-Now that you have initialized the theme, you should install dependencies first:
+You should install dependencies first:
 
 ```sh
-$ cd /path/to/theme
 $ npm install
 ```
 
