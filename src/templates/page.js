@@ -3,27 +3,30 @@ import { Block } from 'jsxstyle'
 import PageContentHeader from '../components/PageContentHeader'
 import Html from '../components/Html'
 import Main from '../styled/Main'
-class Page extends React.Component {
-  render() {
-    return (
-      <>
-        <Main>
-          <Block component="article">
-            <PageContentHeader {...this.props} />
-            <section
-              dangerouslySetInnerHTML={{
-                __html: this.props.content
-              }}
-              className="okmarvin-content"
-            />
-          </Block>
-        </Main>
-      </>
-    )
-  }
+import PropTypes from 'prop-types'
+function Page(props) {
+  return (
+    <>
+      <Main>
+        <Block component="article">
+          <PageContentHeader {...props} />
+          <section
+            dangerouslySetInnerHTML={{
+              __html: props.content
+            }}
+            className="okmarvin-container"
+          />
+        </Block>
+      </Main>
+    </>
+  )
 }
-export default props => (
+Page.propTypes = {
+  content: PropTypes.string
+}
+const PageTemplate = props => (
   <Html {...props}>
     <Page {...props} />
   </Html>
 )
+export default PageTemplate
