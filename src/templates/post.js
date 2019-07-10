@@ -5,32 +5,35 @@ import Main from '../styled/Main'
 import PostSiblings from '../components/PostSiblings'
 import RelatedPost from '../components/RelatedPost'
 import Html from '../components/Html'
-class Post extends React.Component {
-  render() {
-    return (
-      <Main>
-        <Block component="article">
-          <PostContentHeader {...this.props} />
-          <section
-            dangerouslySetInnerHTML={{
-              __html: this.props.content
-            }}
-            className="okmarvin-content"
-          />
-        </Block>
-        {this.props.related && (
-          <RelatedPost
-            data={this.props.related.slice(0, 5)}
-            site={this.props.site}
-          />
-        )}
-        <PostSiblings {...this.props} />
-      </Main>
-    )
-  }
+import PropTypes from 'prop-types'
+function Post(props) {
+  return (
+    <Main>
+      <Block component="article">
+        <PostContentHeader {...props} />
+        <section
+          dangerouslySetInnerHTML={{
+            __html: props.content
+          }}
+          className="okmarvin-content"
+        />
+      </Block>
+      {props.related && (
+        <RelatedPost data={props.related.slice(0, 5)} site={props.site} />
+      )}
+      <PostSiblings {...props} />
+    </Main>
+  )
 }
-export default props => (
-  <Html {...props}>
-    <Post {...props} />
-  </Html>
-)
+Post.propTypes = {
+  related: PropTypes.array,
+  site: PropTypes.object,
+  content: PropTypes.string
+}
+export default function PostTemplate(props) {
+  return (
+    <Html {...props}>
+      <Post {...props} />
+    </Html>
+  )
+}
