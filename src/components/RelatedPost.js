@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from '@reach/router'
 import { Block, InlineBlock } from 'jsxstyle'
 import i18n from '../i18n'
+import PropTypes from 'prop-types'
 const Related = ({ data, site: { lang } }) => (
   <>
     {data.length ? (
       <aside>
-        <Block component='h2' fontSize='1rem'>
-          <InlineBlock background='#f0d892'>
+        <Block component="h2" fontSize="1rem">
+          <InlineBlock background="#ffeb3b">
             {i18n('Learn More', lang)}
           </InlineBlock>
         </Block>
@@ -25,4 +26,10 @@ const Related = ({ data, site: { lang } }) => (
 export default Related
 Related.defaultProps = {
   data: []
+}
+Related.propTypes = {
+  data: PropTypes.array,
+  site: PropTypes.shape({
+    lang: PropTypes.string
+  })
 }
