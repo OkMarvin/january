@@ -4,7 +4,6 @@
  */
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -116,7 +115,6 @@ let config = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(), // remove build first
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     new ManifestPlugin({ seed }),
     new CssoWebpackPlugin(),
