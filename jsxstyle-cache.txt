@@ -51,3 +51,4 @@ alignItems:center;display:flex;flexDirection:row;hoverTextDecoration:none;justif
 color:#999;display:inline;fontStyle:italic;
 background:#ffeb3b;display:inline-block;
 color:gray;display:inline-block;marginRight:10px;
+color:gray;display:inline-block;linkColor:gray;marginRight:10px;
