@@ -32,6 +32,7 @@ const PostContentHeader = ({
               component={Link}
               props={{ to: `/topics/${encodeURIComponent(slug(tag))}/` }}
               color='gray'
+              linkColor='gray'
             >
               <Inline component="span" beforeContent="'#'">
                 {tag}
