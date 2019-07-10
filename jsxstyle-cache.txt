@@ -49,3 +49,5 @@ color:#000;display:inline-block;hoverColor:#000;hoverTextDecoration:underline;li
 display:inline;textDecoration:none !important;
 alignItems:center;display:flex;flexDirection:row;hoverTextDecoration:none;justifyContent:center;marginTop:200px;textAlign:center;textDecoration:none;
 color:#999;display:inline;fontStyle:italic;
+background:#ffeb3b;display:inline-block;
+color:gray;display:inline-block;marginRight:10px;
