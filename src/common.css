@@ -1,11 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
 *::selection {
   background: #4caf4f3e;
 }
@@ -109,19 +101,19 @@ h2 {
 .toc + * {
   margin-top: 0;
 }
-.okmarvin-content {
+.okmarvin-container {
   line-height: 1.4;
   color: #222;
 }
-.okmarvin-content > p {
+.okmarvin-container > p {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
-.okmarvin-content > h2 > span {
+.okmarvin-container > h2 > span {
   position: relative;
   display: inline-block;
 }
-.okmarvin-content > h2 > span:after {
+.okmarvin-container > h2 > span:after {
   display: block;
   background: #FFC107;
   width: 110%;
@@ -132,7 +124,7 @@ h2 {
   height: 20px;
   top: -15px;
 }
-.okmarvin-content a:link {
+.okmarvin-container a:link {
   border-bottom: 1px solid #0000ff40;
 }
 .toc a:link {

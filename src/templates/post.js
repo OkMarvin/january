@@ -15,7 +15,7 @@ function Post(props) {
           dangerouslySetInnerHTML={{
             __html: props.content
           }}
-          className="okmarvin-content"
+          className="okmarvin-container"
         />
       </Block>
       {props.related && (
