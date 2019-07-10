@@ -16,15 +16,15 @@ const PostContentHeader = ({
 }) => (
   <ArticleHeader>
     <ArticleHeading>{title}</ArticleHeading>
-    <Block fontSize='0.889rem' marginBottom='1rem' color='#666'>
+    <Block fontSize="0.889rem" marginBottom="1rem" color="#666">
       by <span>{author}</span> on&nbsp;
-      <InlineBlock props={{ dateTime: datePublished }} component='time'>
+      <InlineBlock props={{ dateTime: datePublished }} component="time">
         {format(datePublished, 'YYYY-MM-DD')}
       </InlineBlock>
       {tags && tags.length ? (
         <Row>
           <span>{i18n('Topics: ', lang)}</span>
-          <Inline component='span'>&nbsp;</Inline>{' '}
+          <Inline component="span">&nbsp;</Inline>{' '}
           {tags.map(tag => (
             <InlineBlock
               marginRight={10}
@@ -32,7 +32,7 @@ const PostContentHeader = ({
               component={Link}
               props={{ to: `/topics/${encodeURIComponent(slug(tag))}/` }}
             >
-              <Inline component='span' beforeContent="'#'">
+              <Inline component="span" beforeContent="'#'">
                 {tag}
               </Inline>
             </InlineBlock>
@@ -46,6 +46,9 @@ PostContentHeader.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   datePublished: PropTypes.number.isRequired,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  site: PropTypes.shape({
+    lang: PropTypes.string
+  })
 }
 export default PostContentHeader
