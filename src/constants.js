@@ -1,5 +1,5 @@
 // should be in commonJS
-// https://github.com/smyte/jsxstyle/tree/master/packages/jsxstyle-loader#whitelistedmodules
+// https://github.com/jsxstyle/jsxstyle/tree/master/packages/jsxstyle-webpack-plugin#whitelistedmodules
 module.exports.bps = {
   sm: 'screen and (min-width: 45em)',
   lg: 'screen and (min-width: 65em)',
