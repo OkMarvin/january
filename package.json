@@ -13,11 +13,11 @@
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.0.0",
     "babel-loader": "^8.0.2",
-    "css-loader": "^3.0.0",
+    "css-loader": "^3.1.0",
     "cssnano": "^4.1.0",
     "csso-webpack-plugin": "^1.0.0-beta.12",
     "eslint": "^6.0.1",
-    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard": "^13.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -27,7 +27,7 @@
     "get-port": "^5.0.0",
     "jest": "^24.0.0",
     "jsxstyle-webpack-plugin": "^1.1.5",
-    "mini-css-extract-plugin": "^0.7.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "parcel-bundler": "^1.12.3",
     "postcss-loader": "^3.0.0",
@@ -35,7 +35,7 @@
     "rimraf": "^2.6.3",
     "style-loader": "^0.23.0",
     "terser-webpack-plugin": "^1.2.0",
-    "webpack": "^4.28.3",
+    "webpack": "^4.36.1",
     "webpack-cli": "^3.2.0",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-node-externals": "^1.6.0"
@@ -61,7 +61,7 @@
     "prismjs": "^1.15.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "sanitize.css": "^10.0.0"
+    "sanitize.css": "^11.0.0"
   },
   "jest": {
     "moduleNameMapper": {
