@@ -127,6 +127,9 @@ h2 {
 .okmarvin-container a:link {
   border-bottom: 1px solid #0000ff40;
 }
+.okmarvin-container a:hover {
+  text-decoration: none;
+}
 .toc a:link {
   border-bottom: none !important;
 }
