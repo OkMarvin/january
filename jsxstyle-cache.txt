@@ -52,3 +52,5 @@ color:#999;display:inline;fontStyle:italic;
 background:#ffeb3b;display:inline-block;
 color:gray;display:inline-block;marginRight:10px;
 color:gray;display:inline-block;linkColor:gray;marginRight:10px;
+display:block;marginTop:50px;
+borderBottom:1px solid #ccc;color:gray;display:inline-block;hoverBorderBottomColor:blue;hoverColor:blue;hoverTextDecoration:none;transition:all 0.3s;
