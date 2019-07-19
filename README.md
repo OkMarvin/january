@@ -8,6 +8,15 @@ theme = "@okmarvin/january"
 
 Make sure to put logo image into `okmarvin project/public/static/img` folder.
 
+### Available Options for \_config.toml
+
+| Option           | Description                               |
+| ---------------- | ----------------------------------------- |
+| github           | github username                           |
+| twitter          | twitter username                          |
+| google_analytics | Google Analytics ID                       |
+| source           | Where you host your markdown source files |
+
 ## Develop
 
 Clone this repo and install dependencies:
