@@ -4,6 +4,7 @@ import PageContentHeader from '../components/PageContentHeader'
 import Html from '../components/Html'
 import Main from '../styled/Main'
 import PropTypes from 'prop-types'
+import SourceLink from '../components/SourceLink'
 function Page(props) {
   return (
     <>
@@ -16,13 +17,17 @@ function Page(props) {
             }}
             className="okmarvin-container"
           />
+          {props.site.source ? <SourceLink {...props} /> : undefined}
         </Block>
       </Main>
     </>
   )
 }
 Page.propTypes = {
-  content: PropTypes.string
+  content: PropTypes.string,
+  site: PropTypes.shape({
+    source: PropTypes.string
+  })
 }
 const PageTemplate = props => (
   <Html {...props}>

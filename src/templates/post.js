@@ -6,6 +6,7 @@ import PostSiblings from '../components/PostSiblings'
 import RelatedPost from '../components/RelatedPost'
 import Html from '../components/Html'
 import PropTypes from 'prop-types'
+import SourceLink from '../components/SourceLink'
 function Post(props) {
   return (
     <Main>
@@ -18,6 +19,7 @@ function Post(props) {
           className="okmarvin-container"
         />
       </Block>
+      {props.site.source ? <SourceLink {...props} /> : undefined}
       {props.related && (
         <RelatedPost data={props.related.slice(0, 5)} site={props.site} />
       )}
@@ -28,7 +30,8 @@ function Post(props) {
 Post.propTypes = {
   related: PropTypes.array,
   site: PropTypes.object,
-  content: PropTypes.string
+  content: PropTypes.string,
+  filePath: PropTypes.string
 }
 export default function PostTemplate(props) {
   return (
