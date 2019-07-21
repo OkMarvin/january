@@ -39,9 +39,7 @@ function PostSiblings(props) {
     site: { lang }
   } = props
   return (
-    <Col
-      alignItems="flex-start"
-      justifyContent="space-between"
+    <Block
       marginTop={`${lineHeight * 2}rem`}
       paddingTop={`${lineHeight * 1}rem`}
       borderTop="5px dashed #eee"
@@ -78,7 +76,7 @@ function PostSiblings(props) {
           </div>
         </NextLink>
       )}
-    </Col>
+    </Block>
   )
 }
 export default PostSiblings
