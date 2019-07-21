@@ -2,6 +2,7 @@
  * You don't need to care this boilerplate
  * Just focus on `src/templates` directory and client js index `src/client` directory
  */
+import 'react-app-polyfill/ie11'
 import React from 'react'
 import { render } from 'react-dom'
 import { Router } from '@reach/router'
