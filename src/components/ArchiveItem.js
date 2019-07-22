@@ -24,7 +24,7 @@ const ArchiveItem = ({ title, datePublished, permalink }) => (
       hoverTextDecoration="none"
       hoverColor="#af0000"
     >
-      <Inline fontStyle="italic" color='#999'>{format(datePublished, 'MM/DD')}</Inline>{' '}
+      <Inline color='#999'>{format(datePublished, 'MM/DD')}</Inline>{' '}
       {title}
     </Inline>
   </Col>
