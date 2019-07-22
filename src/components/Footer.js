@@ -16,6 +16,9 @@ const Link = ({ children, ...rest }) => (
     {children}
   </Inline>
 )
+Link.propTypes = {
+  children: PropTypes.node
+}
 const Footer = ({
   tags = {},
   feed,
@@ -85,7 +88,10 @@ Footer.propTypes = {
   github: PropTypes.string,
   twitter: PropTypes.string,
   rss: PropTypes.bool,
-  theme: PropTypes.string.isRequired
+  theme: PropTypes.string.isRequired,
+  feed: PropTypes.bool,
+  url: PropTypes.string,
+  tags: PropTypes.object
 }
 Footer.defaultProps = {
   author: '',
