@@ -54,3 +54,6 @@ color:gray;display:inline-block;marginRight:10px;
 color:gray;display:inline-block;linkColor:gray;marginRight:10px;
 display:block;marginTop:50px;
 borderBottom:1px solid #ccc;color:gray;display:inline-block;hoverBorderBottomColor:blue;hoverColor:blue;hoverTextDecoration:none;transition:all 0.3s;
+color:#999;display:inline;
+borderTop:5px dashed #eee;display:block;marginTop:3.2rem;paddingTop:1.6rem;
+background:#fafafa;borderBottom:1em solid #ffd54f;borderTop:1px solid #f0f0f0;color:#444;display:block;marginTop:3rem;paddingBottom:3rem;paddingLeft:1em;paddingRight:1em;paddingTop:3rem;@screen and (min-width: 45em)~borderBottom:0.5em solid #ffd54f;@screen and (min-width: 65em)~paddingLeft:0;paddingRight:0;
