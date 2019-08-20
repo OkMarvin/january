@@ -57,3 +57,7 @@ borderBottom:1px solid #ccc;color:gray;display:inline-block;hoverBorderBottomCol
 color:#999;display:inline;
 borderTop:5px dashed #eee;display:block;marginTop:3.2rem;paddingTop:1.6rem;
 background:#fafafa;borderBottom:1em solid #ffd54f;borderTop:1px solid #f0f0f0;color:#444;display:block;marginTop:3rem;paddingBottom:3rem;paddingLeft:1em;paddingRight:1em;paddingTop:3rem;@screen and (min-width: 45em)~borderBottom:0.5em solid #ffd54f;@screen and (min-width: 65em)~paddingLeft:0;paddingRight:0;
+borderBottom:1px solid #ddd;display:flex;flexDirection:column;padding:1rem 0;
+color:rgb(118, 118, 118);display:inline-block;lineHeight:1;
+color:#333;display:inline;fontSize:1rem;hoverColor:#af0000;hoverTextDecoration:none;linkColor:#333;textDecoration:none;
+display:block;fontSize:1.44em;fontWeight:normal;lineHeight:1.2003000750187547;marginBottom:0.8rem;marginTop:1.6rem;@screen and (min-width: 45em)~fontSize:2.3685930369999997em;marginTop:3.2rem;
